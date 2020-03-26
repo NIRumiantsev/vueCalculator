@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+<div class="page">
+    <div class="calc" id="calc">
+        <div class="calc__window">
+            {{ inputMessage }}
+        </div>
+        <button class="calc__button" v-on:click="saveInput(1)">1</button>
+        <button class="calc__button" v-on:click="saveInput(2)">2</button>
+        <button class="calc__button" v-on:click="saveInput(3)">3</button>
+        <button class="calc__button" v-on:click="saveInput(4)">4</button>
+        <button class="calc__button" v-on:click="saveInput(5)">5</button>
+        <button class="calc__button" v-on:click="saveInput(6)">6</button>
+        <button class="calc__button" v-on:click="saveInput(7)">7</button>
+        <button class="calc__button" v-on:click="saveInput(8)">8</button>
+        <button class="calc__button" v-on:click="saveInput(9)">9</button>
+        <button class="calc__button" v-on:click="saveInput(0)">0</button>
+        <button class="calc__button" v-on:click="saveInput(' . ')">.</button>
+        <button class="calc__button" v-on:click="saveInput(' + ')">+</button>
+        <button class="calc__button" v-on:click="saveInput(' - ')">-</button>
+        <button class="calc__button" v-on:click="saveInput(' * ')">*</button>
+        <button class="calc__button" v-on:click="saveInput(' / ')">/</button>
+        <button class="calc__button" v-on:click="saveInput(' % ')">%</button>
+        <button class="calc__button-clear" v-on:click="calcClear()">c</button>
+        <button class="calc__button-equal" v-on:click="printResult()">=</button>
+    </div>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
