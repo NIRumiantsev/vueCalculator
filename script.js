@@ -7,16 +7,18 @@ const config = {
     methods: {
 
         saveInput: function (value) {
+            this.result = '';
             this.inputMessage += value;
         },
 
         printResult: function () {
             this.result = eval(this.inputMessage);
-            this.inputMessage = this.result;
+            this.inputMessage = '';
         },
 
         calcClear: function () {
-            location.reload();
+            this.result = '';
+            this.inputMessage = '';
         }
 
     }
